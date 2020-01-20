@@ -37,9 +37,13 @@
                 });
                 break;
             case 'CATEGORIES':
+                $searchItems = array.map(function (item) {
+                    return searchItem('folder', item.name, item.slug, null, CONFIG.ROOT_URL +'categories/'+ item.name);
+                });
+                break;
             case 'TAGS':
                 $searchItems = array.map(function (item) {
-                    return searchItem(type === 'CATEGORIES' ? 'folder' : 'tag', item.name, item.slug, null, item.permalink);
+                    return searchItem('tag', item.name, item.slug, null, CONFIG.ROOT_URL +'tags/'+ item.name);
                 });
                 break;
             default:
@@ -205,7 +209,7 @@
         }
     }
 
-    $.getJSON(CONFIG.CONTENT_URL, function (json) {
+    $.getJSON(CONFIG.ROOT_URL+CONFIG.CONTENT_URL, function (json) {
         if (location.hash.trim() === '#ins-search') {
             $main.addClass('show');
         }

@@ -11,18 +11,20 @@
           </div>
           <div class="tab-content">
             <div role="tabpanel" class="tab-pane fade active in" id="alipay">
+                <p class="text-grey"><%= __('donate.alipay_action_tip') %></p>
               <div class="donate-payimg">
                 <img src="<%- url_for(theme.donate.alipay.qrcode) %>" alt="<%= __('donate.qrcode_alt') %>" title="<%= __('donate.qrcode_title') %>" />
               </div>
               <p class="text-muted mv"><%= __('donate.tip') %></p>
-              <p class="text-grey"><%= __('donate.alipay_action_tip') %></p>
+              
             </div>
             <div role="tabpanel" class="tab-pane fade" id="wechatpay">
+                <p class="text-grey"><%= __('donate.wechatpay_action_tip') %></p>
               <div class="donate-payimg">
                 <img src="<%- url_for(theme.donate.wechatpay.qrcode) %>" alt="<%= __('donate.qrcode_alt') %>" title="<%= __('donate.qrcode_title') %>" />
               </div>
               <p class="text-muted mv"><%= __('donate.tip') %></p>
-              <p class="text-grey"><%= __('donate.wechatpay_action_tip') %></p>
+              
             </div>
           </div>
           <div class="donate-footer">

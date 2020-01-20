@@ -62,6 +62,9 @@ unit:
   word: words
   time: minutes
 article:
+  author: 'Author:'
+  postedon: Posted On
+  editedon: Edited On
   wordcount: Word Count
   readcount: Read Count
   more: Read More
